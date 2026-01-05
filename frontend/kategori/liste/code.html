@@ -1,0 +1,131 @@
+<main class="max-w-[1280px] mx-auto px-4 md:px-10">
+  <section class="pt-8">
+    <h1 class="text-2xl md:text-3xl font-extrabold text-text-main">Kategoriler</h1>
+    <p class="text-text-secondary mt-2">Filtreler şimdilik UI. Backend bağlanınca gerçek filtre olacak.</p>
+  </section>
+
+  <section class="mt-8 grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6">
+    <!-- Filters -->
+    <aside class="rounded-3xl border border-[#f4f2f0] bg-white p-5 h-fit">
+      <div class="flex items-center justify-between">
+        <div class="font-bold text-text-main">Filtreler</div>
+        <button class="text-sm font-semibold text-primary hover:opacity-80 transition">Sıfırla</button>
+      </div>
+
+      <div class="mt-5 space-y-5">
+        <div>
+          <div class="text-sm font-semibold text-text-main mb-2">Yaş</div>
+          <div class="flex flex-wrap gap-2">
+            <button class="px-3 h-9 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition text-sm">0–12 Ay</button>
+            <button class="px-3 h-9 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition text-sm">1–3 Yaş</button>
+            <button class="px-3 h-9 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition text-sm">4–6 Yaş</button>
+            <button class="px-3 h-9 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition text-sm">7+ Yaş</button>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-sm font-semibold text-text-main mb-2">Beden</div>
+          <div class="flex flex-wrap gap-2">
+            <button class="px-3 h-9 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition text-sm">62</button>
+            <button class="px-3 h-9 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition text-sm">68</button>
+            <button class="px-3 h-9 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition text-sm">74</button>
+            <button class="px-3 h-9 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition text-sm">80</button>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-sm font-semibold text-text-main mb-2">Renk</div>
+          <div class="flex flex-wrap gap-2">
+            <button class="px-3 h-9 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition text-sm">Krem</button>
+            <button class="px-3 h-9 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition text-sm">Bej</button>
+            <button class="px-3 h-9 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition text-sm">Pudra</button>
+            <button class="px-3 h-9 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition text-sm">Mavi</button>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-[#f4f2f0]">
+          <div class="text-sm font-semibold text-text-main mb-2">Hızlı Kategoriler</div>
+          <div class="space-y-2 text-sm">
+            <a class="block hover:text-primary transition" href="#bebek">Bebek</a>
+            <a class="block hover:text-primary transition" href="#kiz">Kız Çocuk</a>
+            <a class="block hover:text-primary transition" href="#erkek">Erkek Çocuk</a>
+            <a class="block hover:text-primary transition" href="#aksesuar">Aksesuar</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Results -->
+    <div class="space-y-10">
+      <!-- Section -->
+      <div id="bebek">
+        <div class="flex items-end justify-between">
+          <h2 class="text-xl md:text-2xl font-extrabold text-text-main">Bebek</h2>
+          <a href="/bebek-urunleri/dist/index.html" class="text-sm font-semibold text-primary hover:opacity-80 transition">Shop’a dön →</a>
+        </div>
+        <div class="mt-4 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+          <!-- card -->
+          <a href="/urun/dist/index.html" class="group rounded-3xl border border-[#f4f2f0] p-3 hover:shadow-md transition bg-white">
+            <div class="aspect-[4/5] rounded-2xl bg-[#f4f2f0] flex items-center justify-center">
+              <span class="material-symbols-outlined text-[34px] text-text-secondary">child_friendly</span>
+            </div>
+            <div class="mt-3">
+              <div class="text-sm font-semibold text-text-main group-hover:text-primary transition">Bebek Tulum</div>
+              <div class="text-xs text-text-secondary mt-1">0–12 Ay</div>
+              <div class="mt-2 font-bold text-text-main">₺ 0,00</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div id="kiz">
+        <h2 class="text-xl md:text-2xl font-extrabold text-text-main">Kız Çocuk</h2>
+        <div class="mt-4 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+          <a href="/urun/dist/index.html" class="group rounded-3xl border border-[#f4f2f0] p-3 hover:shadow-md transition bg-white">
+            <div class="aspect-[4/5] rounded-2xl bg-[#f4f2f0] flex items-center justify-center">
+              <span class="material-symbols-outlined text-[34px] text-text-secondary">checkroom</span>
+            </div>
+            <div class="mt-3">
+              <div class="text-sm font-semibold text-text-main group-hover:text-primary transition">Kız Elbise</div>
+              <div class="text-xs text-text-secondary mt-1">2–6 Yaş</div>
+              <div class="mt-2 font-bold text-text-main">₺ 0,00</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div id="erkek">
+        <h2 class="text-xl md:text-2xl font-extrabold text-text-main">Erkek Çocuk</h2>
+        <div class="mt-4 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+          <a href="/urun/dist/index.html" class="group rounded-3xl border border-[#f4f2f0] p-3 hover:shadow-md transition bg-white">
+            <div class="aspect-[4/5] rounded-2xl bg-[#f4f2f0] flex items-center justify-center">
+              <span class="material-symbols-outlined text-[34px] text-text-secondary">person</span>
+            </div>
+            <div class="mt-3">
+              <div class="text-sm font-semibold text-text-main group-hover:text-primary transition">Erkek Takım</div>
+              <div class="text-xs text-text-secondary mt-1">4–10 Yaş</div>
+              <div class="mt-2 font-bold text-text-main">₺ 0,00</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div id="aksesuar">
+        <h2 class="text-xl md:text-2xl font-extrabold text-text-main">Aksesuar</h2>
+        <div class="mt-4 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+          <a href="/urun/dist/index.html" class="group rounded-3xl border border-[#f4f2f0] p-3 hover:shadow-md transition bg-white">
+            <div class="aspect-[4/5] rounded-2xl bg-[#f4f2f0] flex items-center justify-center">
+              <span class="material-symbols-outlined text-[34px] text-text-secondary">redeem</span>
+            </div>
+            <div class="mt-3">
+              <div class="text-sm font-semibold text-text-main group-hover:text-primary transition">Şapka / Çorap</div>
+              <div class="text-xs text-text-secondary mt-1">Tümü</div>
+              <div class="mt-2 font-bold text-text-main">₺ 0,00</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>

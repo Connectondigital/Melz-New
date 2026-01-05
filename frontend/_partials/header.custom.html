@@ -1,0 +1,112 @@
+<header class="sticky top-0 z-50 bg-white border-b border-[#e8e6e4]">
+  <div class="max-w-[1280px] mx-auto px-4 md:px-10 py-5 flex items-center gap-4">
+
+    <!-- LOGO -->
+    <a href="/anasayfa/dist/index.html" class="flex items-center shrink-0">
+      <img
+        src="/assets/img/logo.png" 
+        alt="Mel'z Baby&Kids"
+        class="w-auto h-20 lg:h-24 object-contain"
+      />
+    </a>
+
+    <!-- DESKTOP MENU -->
+    <nav class="hidden lg:flex items-center gap-7 ml-10">
+      <a href="/anasayfa/dist/index.html" class="text-sm font-medium hover:text-primary transition-colors">
+        Ana Sayfa
+      </a>
+      <a href="/bebek-urunleri/dist/index.html" class="text-sm font-medium hover:text-primary transition-colors">
+        Shop
+      </a>
+      <a href="/kategori/liste/dist/index.html" class="text-sm font-medium hover:text-primary transition-colors">
+        Giyim
+      </a>
+      <a href="/blog/dist/index.html" class="text-sm font-medium hover:text-primary transition-colors">
+        Blog
+      </a>
+      <a href="/iletisim/dist/index.html" class="text-sm font-medium hover:text-primary transition-colors">
+        İletişim
+      </a>
+    </nav>
+
+    <!-- RIGHT ACTIONS -->
+    <div class="flex items-center gap-3 ml-auto">
+
+      <!-- SEARCH (desktop) -->
+      <div class="hidden md:flex items-center bg-[#f4f2f0] rounded-xl px-3 h-10 w-[280px]">
+        <span class="material-symbols-outlined text-[20px] text-text-secondary">
+          search
+        </span>
+        <input
+          type="text"
+          placeholder="Ürün ara..."
+          class="bg-transparent outline-none px-2 text-sm w-full"
+        />
+      </div>
+
+      <!-- CART -->
+      <a
+        href="/sepet/dist/index.html"
+        class="relative flex items-center justify-center h-10 w-10 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition-colors"
+        aria-label="Sepet"
+      >
+        <span class="material-symbols-outlined text-[22px]">
+          shopping_cart
+        </span>
+
+        <!-- BADGE -->
+        <span
+          id="cart-badge"
+          class="hidden absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-red-500 text-white text-[10px] font-bold flex items-center justify-center border-2 border-white"
+        >
+          0
+        </span>
+      </a>
+
+      <!-- ACCOUNT -->
+      <a
+        href="/hesabim/dist/index.html"
+        class="flex items-center justify-center h-10 w-10 rounded-xl bg-[#f4f2f0] hover:bg-[#e8e6e4] transition-colors"
+        aria-label="Hesabım"
+      >
+        <span class="material-symbols-outlined text-[22px]">
+          person
+        </span>
+      </a>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden flex items-center justify-center h-10 w-10 rounded-xl bg-[#f4f2f0]"
+        aria-label="Menü"
+      >
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-[#e8e6e4] bg-white">
+    <div class="px-4 py-4 flex flex-col gap-3 text-sm font-medium">
+      <a href="/anasayfa/dist/index.html">Ana Sayfa</a>
+      <a href="/bebek-urunleri/dist/index.html">Shop</a>
+      <a href="/kategori/liste/dist/index.html">Giyim</a>
+      <a href="/blog/dist/index.html">Blog</a>
+      <a href="/iletisim/dist/index.html">İletişim</a>
+      <a href="/sepet/dist/index.html">Sepet</a>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU TOGGLE -->
+<script>
+  (function () {
+    const btn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    if (!btn || !menu) return;
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  })();
+</script>

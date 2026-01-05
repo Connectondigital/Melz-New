@@ -1,0 +1,110 @@
+<main class="flex-1 flex flex-col items-center py-10 px-4 md:px-10 lg:px-20 w-full max-w-[1440px] mx-auto">
+<!-- Page Header -->
+<div class="w-full max-w-[960px] mb-12 text-center md:text-left">
+<h1 class="text-[#171311] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-tight mb-4">
+                Bize Ulaşın
+            </h1>
+<p class="text-[#876f64] dark:text-gray-400 text-lg font-medium leading-relaxed max-w-2xl">
+                Sorularınız, önerileriniz veya siparişleriniz hakkında destek almak için buradayız. Formu doldurun, size en kısa sürede dönüş yapalım.
+            </p>
+</div>
+<!-- Split Layout: Form & Info -->
+<div class="w-full max-w-[1200px] grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+<!-- Left Column: Contact Form -->
+<div class="lg:col-span-7 bg-white dark:bg-[#2a2a2a] p-6 md:p-8 rounded-2xl border border-[#e5dfdc] dark:border-white/10 shadow-sm">
+<h2 class="text-2xl font-bold text-[#171311] dark:text-white mb-6">İletişim Formu</h2>
+<form class="flex flex-col gap-5">
+<div class="flex flex-col md:flex-row gap-5">
+<label class="flex flex-col flex-1 gap-2">
+<span class="text-[#171311] dark:text-gray-200 text-sm font-bold">Adınız Soyadınız</span>
+<input class="w-full h-12 rounded-xl border border-[#e5dfdc] dark:border-white/20 bg-[#fbfafa] dark:bg-white/5 text-[#171311] dark:text-white placeholder:text-[#876f64] dark:placeholder:text-gray-500 focus:border-primary focus:ring-primary/20 transition-all px-4 text-base" placeholder="Ad Soyad" type="text"/>
+</label>
+<label class="flex flex-col flex-1 gap-2">
+<span class="text-[#171311] dark:text-gray-200 text-sm font-bold">E-posta Adresiniz</span>
+<input class="w-full h-12 rounded-xl border border-[#e5dfdc] dark:border-white/20 bg-[#fbfafa] dark:bg-white/5 text-[#171311] dark:text-white placeholder:text-[#876f64] dark:placeholder:text-gray-500 focus:border-primary focus:ring-primary/20 transition-all px-4 text-base" placeholder="ornek@mail.com" type="email"/>
+</label>
+</div>
+<label class="flex flex-col gap-2">
+<span class="text-[#171311] dark:text-gray-200 text-sm font-bold">Konu</span>
+<div class="relative">
+<select class="w-full h-12 rounded-xl border border-[#e5dfdc] dark:border-white/20 bg-[#fbfafa] dark:bg-white/5 text-[#171311] dark:text-white focus:border-primary focus:ring-primary/20 transition-all px-4 text-base appearance-none">
+<option>Genel Bilgi</option>
+<option>Sipariş Durumu</option>
+<option>İade ve Değişim</option>
+<option>Diğer</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-[#876f64] pointer-events-none">expand_more</span>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-[#171311] dark:text-gray-200 text-sm font-bold">Mesajınız</span>
+<textarea class="w-full min-h-[160px] rounded-xl border border-[#e5dfdc] dark:border-white/20 bg-[#fbfafa] dark:bg-white/5 text-[#171311] dark:text-white placeholder:text-[#876f64] dark:placeholder:text-gray-500 focus:border-primary focus:ring-primary/20 transition-all p-4 text-base resize-y" placeholder="Mesajınızı buraya yazabilirsiniz..."></textarea>
+</label>
+<div class="pt-2">
+<button class="cursor-pointer flex items-center justify-center w-full md:w-auto px-8 h-12 bg-primary hover:bg-primary/90 text-white text-base font-bold rounded-xl transition-colors shadow-lg shadow-primary/30 gap-2" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+                            Mesajı Gönder
+                        </button>
+</div>
+</form>
+</div>
+<!-- Right Column: Contact Info & Map -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Info Cards -->
+<div class="flex flex-col gap-4">
+<!-- Phone -->
+<div class="group flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-[#2a2a2a] border border-[#e5dfdc] dark:border-white/10 hover:border-primary/50 transition-all">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h3 class="text-[#171311] dark:text-white font-bold text-base">Telefon</h3>
+<p class="text-[#876f64] dark:text-gray-400 text-sm font-medium">+90 555 123 45 67</p>
+</div>
+</div>
+<!-- Email -->
+<div class="group flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-[#2a2a2a] border border-[#e5dfdc] dark:border-white/10 hover:border-primary/50 transition-all">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h3 class="text-[#171311] dark:text-white font-bold text-base">E-posta</h3>
+<p class="text-[#876f64] dark:text-gray-400 text-sm font-medium">info@melzbabykids.com</p>
+</div>
+</div>
+<!-- Address -->
+<div class="group flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-[#2a2a2a] border border-[#e5dfdc] dark:border-white/10 hover:border-primary/50 transition-all">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h3 class="text-[#171311] dark:text-white font-bold text-base">Adres</h3>
+<p class="text-[#876f64] dark:text-gray-400 text-sm font-medium">Bağdat Caddesi No: 123, Kadıköy, İstanbul</p>
+</div>
+</div>
+</div>
+<!-- Map -->
+<div class="rounded-2xl overflow-hidden border border-[#e5dfdc] dark:border-white/10 h-64 relative bg-gray-200">
+<img alt="Mel'z Baby&amp;Kids Mağaza Konumu Haritası" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Map showing location in Kadikoy Istanbul with orange marker" data-location="Kadikoy, Istanbul" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTwR8fliYMv336JutHj9JuLRbZwgXToZXWrXTMUp_xhuQOx8EeGJR096MRWj8LhWYY6P_3vunECdltjRiabhVabTN1zxq6YkiPHQtQLaG8nUZA_8_6H4lpL6e0u58ugBpj_W1uUSjU1VLtKQh0S4vGVCnoZV3YZsNhzU21N1hbgQFRmAVbq-sZGZB8XYOhoBYyZlgzp-ZNxj9rP23fd7k_RiJAmDlQdboWhIRS1hqmLi3_cM5oYB4ZnC8RVCqBcf3qmyAEAwVqxkO"/>
+<div class="absolute bottom-3 left-3 bg-white/90 dark:bg-black/80 px-3 py-1.5 rounded-lg backdrop-blur-sm text-xs font-bold shadow-sm">
+                        Mağaza Konumu
+                     </div>
+</div>
+<!-- Social Media -->
+<div class="flex items-center justify-between p-5 rounded-2xl bg-primary/5 dark:bg-primary/10 border border-primary/10">
+<span class="text-sm font-bold text-primary">Bizi Takip Edin:</span>
+<div class="flex gap-3">
+<a class="size-8 flex items-center justify-center rounded-full bg-white dark:bg-white/10 text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-lg">public</span> <!-- Using generic globe for web -->
+</a>
+<a class="size-8 flex items-center justify-center rounded-full bg-white dark:bg-white/10 text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-lg">photo_camera</span> <!-- Using camera for instagram proxy -->
+</a>
+<a class="size-8 flex items-center justify-center rounded-full bg-white dark:bg-white/10 text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-lg">share</span> <!-- Generic share -->
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
