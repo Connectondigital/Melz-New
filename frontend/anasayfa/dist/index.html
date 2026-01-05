@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="tr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Mel'z Baby&Kids | Ana Sayfa</title>
+  
+  <link rel="stylesheet" href="/frontend/assets/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "var(--primary)",
+            "primary-300": "var(--primary-300)"
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Slider geçiş efekti */
+    .slider-img { transition: opacity 1s ease-in-out; }
+    
+    /* Vitrin kartları için hover efekti */
+    .showcase-banner:hover .showcase-img { transform: scale(1.05); }
+    .showcase-img { transition: transform 0.7s ease; }
+
+    /* Yatay taşmayı engelleme (Mobile Fix) */
+    body { overflow-x: hidden; width: 100%; }
+
+    /* Yeni Header Cam Efekti */
+    .glass-header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+
+<body class="bg-[#fcfcfc] text-[#1f2937] antialiased">
+
+  <header class="sticky top-0 z-50 glass-header border-b border-gray-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.03)]">
+    <div class="bg-primary text-white text-[10px] md:text-xs font-bold text-center py-2 tracking-wide uppercase">
+      🚀 1500 TL üzeri kargo bedava! — <span class="opacity-80 font-normal normal-case">Keyifli Alışverişler</span>
+    </div>
+    <div class="max-w-[1440px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between gap-6">
+      <div class="flex lg:hidden items-center gap-2">
+        <button id="mobile-menu-btn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors text-gray-800">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+      <a href="/frontend/anasayfa/dist/index.html" class="flex items-center gap-3 shrink-0 absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 group">
+        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border border-gray-100 shadow-sm group-hover:shadow-md transition-all">
+           <img src="/frontend/assets/img/logo.png" alt="Mel'z Baby" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex flex-col leading-none">
+           <span class="font-extrabold text-lg md:text-xl tracking-tight text-gray-900 group-hover:text-primary transition-colors">Mel'z Baby</span>
+        </div>
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 mx-auto absolute left-1/2 -translate-x-1/2">
+        <a href="/frontend/anasayfa/dist/index.html" class="text-[15px] font-bold text-gray-900 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Ana Sayfa</a>
+        <a href="/frontend/bebek-urunleri/dist/index.html" class="text-[15px] font-medium text-gray-600 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Shop</a>
+        <a href="/frontend/kategori/liste/dist/index.html" class="text-[15px] font-medium text-gray-600 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Giyim</a>
+        <a href="/frontend/blog/dist/index.html" class="text-[15px] font-medium text-gray-600 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Blog</a>
+        <a href="/frontend/iletisim/dist/index.html" class="text-[15px] font-medium text-gray-600 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">İletişim</a>
+      </nav>
+      <div class="flex items-center gap-1 md:gap-2 ml-auto lg:ml-0">
+        <a href="/frontend/sepet/dist/index.html" class="group relative w-11 h-11 flex items-center justify-center rounded-full bg-gray-50 hover:bg-primary hover:text-white text-gray-800 transition-all duration-300 border border-gray-100">
+          <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+          <span id="cart-badge" class="hidden absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-red-500 text-white text-[10px] font-bold flex items-center justify-center border-2 border-white group-hover:border-primary transition-colors">0</span>
+        </a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white absolute w-full left-0 top-full shadow-xl z-40">
+      <div class="p-4 flex flex-col gap-2 text-sm font-medium">
+        <a href="/frontend/anasayfa/dist/index.html" class="flex items-center justify-between p-3 rounded-xl bg-gray-50 text-gray-900 font-bold">Ana Sayfa</a>
+        <a href="/frontend/bebek-urunleri/dist/index.html" class="flex items-center justify-between p-3 rounded-xl hover:bg-gray-50 text-gray-600 hover:text-primary">Shop</a>
+        <a href="/frontend/kategori/liste/dist/index.html" class="flex items-center justify-between p-3 rounded-xl hover:bg-gray-50 text-gray-600 hover:text-primary">Giyim</a>
+        <a href="/frontend/iletisim/dist/index.html" class="flex items-center justify-between p-3 rounded-xl hover:bg-gray-50 text-gray-600 hover:text-primary">İletişim</a>
+      </div>
+    </div>
+  </header>
+  <script>
+    const btn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    if(btn && menu){
+      btn.addEventListener("click", () => { menu.classList.toggle("hidden"); });
+    }
+  </script>
+
+  <main class="flex-1">
+    <section class="relative max-w-[1440px] mx-auto mt-2 md:mt-4 px-2 md:px-10">
+      <div class="relative w-full rounded-2xl md:rounded-[2.5rem] overflow-hidden min-h-[80vh] md:min-h-[600px] lg:h-[650px] shadow-sm md:shadow-2xl bg-gray-200 group">
+        <div id="hero-slider" class="absolute inset-0 w-full h-full overflow-hidden">
+          <img src="/frontend/assets/slider/slider-bebek.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Hero Slide" />
+        </div>
+        <div class="absolute inset-0 bg-black/40 z-10 pointer-events-none"></div>
+        <div class="relative z-20 h-full flex flex-col justify-end md:justify-center items-start px-5 md:px-16 lg:px-24 max-w-3xl gap-4 md:gap-6 pb-20 md:pb-0">
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tight drop-shadow-md">
+            Minikleriniz İçin <br /> <span class="text-[#f0dcc5]">En Saf Dokunuşlar</span>
+          </h1>
+          <div class="flex flex-wrap gap-3 pt-2 md:pt-4 w-full md:w-auto">
+            <a href="/frontend/bebek-urunleri/dist/index.html" class="h-12 md:h-14 px-6 md:px-10 rounded-xl bg-primary text-white text-sm md:text-base font-bold hover:bg-white hover:text-primary transition-all duration-300 shadow-lg flex-1 md:flex-none items-center justify-center flex">
+              Koleksiyonu Keşfet
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 md:py-14 px-4 md:px-10 bg-[#fdfaf7]">
+      <div class="max-w-[1440px] mx-auto w-full">
+        <div class="flex items-end justify-between mb-6">
+          <h2 class="text-xl md:text-3xl font-bold text-gray-800 tracking-tight mb-1">Haftanın Favorileri</h2>
+        </div>
+        <div id="home-featured-grid" data-home-featured-grid class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-3 md:gap-6">
+          <div class="col-span-full text-center text-gray-400 py-10">Ürünler Yükleniyor...</div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function() {
+        const productIds = ["982504262","1058303962","1032544102","1058305732","1058304657","1058304480"];
+        const grid = document.querySelector('[data-home-featured-grid]');
+        if (!grid) return;
+        function formatPrice(price) { return typeof price === 'number' ? '₺' + price.toFixed(2) : price; }
+
+        fetch('/frontend/assets/data/products.json')
+          .then(res => res.json())
+          .then(products => {
+            const productsById = {};
+            (products || []).forEach(p => { if (p && p.id != null) productsById[p.id.toString()] = p; });
+            const selectedProducts = productIds.map(id => productsById[id]).filter(Boolean);
+            if (selectedProducts.length === 0) { grid.innerHTML = '<div>Ürün bulunamadı.</div>'; return; }
+            grid.innerHTML = selectedProducts.map(product => {
+              const image = product.image || '/frontend/assets/img/placeholder.png';
+              return `
+                <a href="/frontend/urun/dist/index.html?id=${product.id}" class="bg-white rounded-xl p-3 shadow-sm border border-gray-100 hover:shadow-lg transition-all group">
+                  <div class="aspect-[4/5] bg-gray-50 rounded-lg overflow-hidden mb-2">
+                    <img src="${image}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                  </div>
+                  <h4 class="font-bold text-gray-800 text-sm line-clamp-2">${product.title}</h4>
+                  <p class="text-primary font-bold mt-1 text-sm">${formatPrice(product.price)}</p>
+                </a>`;
+            }).join('');
+          });
+      })();
+    </script>
+  </main>
+
+  <footer class="border-t border-[#e8e6e4] bg-white mt-8">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-10 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="md:col-span-1">
+          <a href="/frontend/anasayfa/dist/index.html" class="inline-flex items-center gap-3">
+            <img src="/frontend/assets/img/logo.png" alt="Mel'z Baby" class="h-10 w-auto" />
+            <span class="font-black text-lg tracking-tight">Mel'z Baby</span>
+          </a>
+        </div>
+        <div>
+          <div class="font-bold mb-3">Menü</div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li><a href="/frontend/anasayfa/dist/index.html">Ana Sayfa</a></li>
+            <li><a href="/frontend/bebek-urunleri/dist/index.html">Ürünler</a></li>
+            <li><a href="/frontend/iletisim/dist/index.html">İletişim</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-[#e8e6e4] text-sm text-gray-500">
+        © <span id="year"></span> Mel'z Baby.
+      </div>
+    </div>
+  </footer>
+  <script> document.getElementById("year").textContent = new Date().getFullYear(); </script>
+  
+  <script src="/frontend/assets/api.v2.js?v=1" defer></script>
+  <script src="/frontend/assets/js/add-to-cart.js?v=1" defer></script>
+  <script src="/frontend/assets/js/products-page.js?v=1" defer></script>
+</body>
+</html>
